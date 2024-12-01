@@ -2,8 +2,8 @@ def main():
     with open('input.txt') as file:
         lines = file.readlines()
 
-    lowest_left_numbers = sorted(int(line.split(' ')[0]) for line in lines)
-    lowest_right_numbers = sorted(int(line.split(' ')[3]) for line in lines)
+    lowest_left_numbers = list(int(line.split(' ')[0]) for line in lines)
+    lowest_right_numbers = list(int(line.split(' ')[3]) for line in lines)
     similarity_score = 0
 
     for i in range(len(lowest_left_numbers)):
